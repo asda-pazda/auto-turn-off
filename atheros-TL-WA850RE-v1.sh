@@ -1,8 +1,8 @@
 #!/bin/sh
 disabled='0'
-while [ $disabled == '0' ]
 echo timer > /sys/class/leds/tp-link\:blue\:signal5/trigger
 echo timer > /sys/class/leds/tp-link\:blue\:signal4/trigger
+while [ $disabled == '0' ]
 do
 	if [ $( arp -n | wc -l ) == 1 ]
 	then
