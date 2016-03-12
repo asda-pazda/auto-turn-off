@@ -15,5 +15,6 @@ do
 		echo 2500 > /sys/class/leds/tp-link\:blue\:signal4/delay_on
 		echo 1900 > /sys/class/leds/tp-link\:blue\:signal5/delay_off
 		echo 2400 > /sys/class/leds/tp-link\:blue\:signal4/delay_off
+		sleep 10
 	fi;
 done
