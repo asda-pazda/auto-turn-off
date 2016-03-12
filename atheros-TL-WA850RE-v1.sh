@@ -4,7 +4,7 @@ echo timer > /sys/class/leds/tp-link\:blue\:signal5/trigger
 echo timer > /sys/class/leds/tp-link\:blue\:signal4/trigger
 while [ $disabled == '0' ]
 do
-	if [ $( arp -n | wc -l ) == 1 ]
+	if [ -z $( iw dev wlan0 station dump )]
 	then
 		echo none > /sys/class/leds/tp-link\:blue\:signal5/trigger
 		echo none > /sys/class/leds/tp-link\:blue\:signal4/trigger
